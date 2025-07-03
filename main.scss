@@ -1,1 +1,98 @@
+body {
+  margin: 0;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.people {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(4, 200px);
+  }
+  gap: 30px 40px;
+  align-items: center;
+  justify-content: center;
+  margin: 40px;
+}
+
+.person {
+  transition-duration: 1s;
+  width: 200px;
+  box-sizing: border-box;   
+}
+
+.photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.people__image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition-duration: 1s;  
+  
+}
+
+.rank {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 10px; 
+  color: #8B0000;
+  transform: translate(0, 0); 
+  transition: transform 1s ease-in-out; 
+}
+
+.details {
+  text-align: center;
+}
+
+.name {
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.sport, .pay {
+  font-weight: 400;
+  font-size: px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.extra {
+  visibility: hidden;
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out;
+}
+
+.person:hover .extra { 
+  visibility: visible;
+  opacity: 1; 
+  font-size: 18px;
+}
+
+.person:hover {
+  transform: scale(1.2);
+  transition-duration: 1s;
+  background-color: #EEEEEE;
+  border-radius: 12px;
+}
+
+.people__image:hover {
+  border-radius: 60px;
+  transition-duration: 1s;
+}
+
 
